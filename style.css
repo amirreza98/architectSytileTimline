@@ -1,0 +1,58 @@
+html, body { margin: 0; height: 100%; }
+#slider-container {
+  position: relative;
+  height: 100vh;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.slider { display: flex; }
+.slide {
+  flex: none;
+  width: 100vw;
+  height: 90vh;
+  scroll-snap-align: start;
+  display: flex;
+}
+.slide model-viewer { width: 100%; height: 100%; display: block; }
+
+/* دکمه‌های دایره‌ای ثابت */
+.nav-buttons {
+  position: fixed;
+  bottom: 60px; /* کمی بالاتر از لبه */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px; /* فاصله بین دکمه‌ها */
+  z-index: 10;
+}
+
+/* ظاهر هر دکمه */
+.nav-buttons a {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(57, 12, 65, 0.4);
+  display: block;
+  text-indent: -9999px; /* مخفی کردن شماره */
+  transition: all 0.25s ease;
+  border: 2px solid rgba(118, 129, 229, 0.7);
+  cursor: pointer;
+}
+
+/* افکت hover */
+.nav-buttons a:hover {
+  background: rgba(117, 28, 28, 0.8);
+  transform: scale(1.2);
+}
+
+/* حالت فعال (اختیاری، اگر بخوای به صورت دستی مشخص کنی) */
+.nav-buttons a.active {
+  background: black;
+  border-color: rgb(15, 29, 131);
+  transform: scale(1.4);
+}
+.nav-buttons a.active:hover {
+  transform: scale(1.5);
+}
