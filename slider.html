@@ -2,50 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>3D Slider</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="slider.css" />
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <div id="slider-container">
     <div class="slider">
       <section id="slide1" class="slide">
-        <model-viewer alt="11,600 BC to 3,500 BC — Prehistoric Times"
-          src="models/1.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+        <div class="content">
+          <model-viewer alt="11,600 BC to 3,500 BC — Prehistoric Times"
+            src="models/PrehistoricTime.glb" camera-controls auto-rotate shadow-intensity="1">
+          </model-viewer>
+          <p>01. Prehistoric Time - 11,600 B.C. to 3,500 B.C</p>
+        </div>
       </section>
 
       <section id="slide2" class="slide">
-        <model-viewer alt="3,050 BC to 900 BC — Ancient Egypt"
-          src="models/2.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+        <div class="content">
+          <model-viewer alt="3,050 BC to 900 BC — Ancient Egypt"
+            src="models/AncientEgypt.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+            <p>02. Ancient Egypt - 3,050 B.C. to 900 B.C</p>
+        </div>
       </section>
 
       <section id="slide3" class="slide">
-        <model-viewer alt="Spacesuit — Smithsonian"
-          src="models/3.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+        <div class="content">
+          <model-viewer alt="03. Classical Period"
+            src="models/ClassicalPeriod.glb" camera-controls auto-rotate shadow-intensity="1">
+          </model-viewer>
+          <p>03. Classical Period - 850 B.C.to 476 AD</p>
+        </div>
       </section>
 
       <section id="slide4" class="slide">
-        <model-viewer alt="Slide 4" src="models/4.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+        <div class="content">
+          <model-viewer alt="04. Byzantine" 
+            src="models/Byzantine.glb" camera-controls auto-rotate shadow-intensity="1">
+          </model-viewer>
+          <p>04. Byzantine</p>
+        </div>
       </section>
 
       <section id="slide5" class="slide">
-        <model-viewer alt="Slide 5" src="models/5.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+        <div class="content">
+          <model-viewer alt="05. Romanesque" 
+          src="models/Romanesque.glb" camera-controls auto-rotate shadow-intensity="1">
+          </model-viewer>
+          <p>05. Romanesque - 11th and 12th centuries</p>
       </section>
-
       <section id="slide6" class="slide">
-        <model-viewer alt="Slide 6" src="models/6.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+        <div class="content">
+          <model-viewer alt="06. Gothic" 
+            src="models/Gothic.glb" camera-controls auto-rotate shadow-intensity="1">
+          </model-viewer>
+          <p>06. Gothic - around the 12th century</p>
+        </div>
       </section>
 
       <section id="slide7" class="slide">
-        <model-viewer alt="Slide 7" src="models/7.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+        <div class="content">
+          <model-viewer alt="07. Renaissance" 
+            src="models/Renaissance.glb" camera-controls auto-rotate shadow-intensity="1">
+          </model-viewer>
+          <p>07. Renaissance - 18th and 19th centuries</p>
+        </div>
       </section>
 
       <section id="slide8" class="slide">
-        <model-viewer alt="Slide 8" src="models/8.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+        <div class="content">
+          <model-viewer alt="Neoclassical Architecture" 
+            src="models/NeoclassicalArchitecture.glb" camera-controls auto-rotate shadow-intensity="1">
+          </model-viewer>
+          <p>Neoclassical Architecture</p>
+        </div>
       </section>
     </div>
 
@@ -53,7 +86,6 @@
       <a href="#slide1">1</a>
       <a href="#slide2">2</a>
       <a href="#slide3">3</a>
-      <!-- اگر خواستی: -->
       <a href="#slide4">4</a>
       <a href="#slide5">5</a>
       <a href="#slide6">6</a>

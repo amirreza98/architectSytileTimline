@@ -1,23 +1,55 @@
-html, body { margin: 0; height: 100%; }
+html, body { margin: 0; height: 100vh; background: rgb(180, 230, 230); overflow: hidden; display: flex; justify-content: center; align-items: center; }
 #slider-container {
-  position: relative;
+  width: 100vw;
   height: 100vh;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
-.slider { display: flex; }
+
+.slider { 
+  display: flex; 
+  height: 90%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+
+}
 .slide {
   flex: none;
   width: 100vw;
-  height: 90vh;
+  height: 100%;
   scroll-snap-align: start;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
 }
-.slide model-viewer { width: 100%; height: 100%; display: block; }
+.content {
+  display: flex;
+  flex-direction: column;     /* مدل بالا، متن پایین */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.content p {
+  margin-top: 2px;
+  margin-bottom: 25px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
 
-/* دکمه‌های دایره‌ای ثابت */
+
+.slide model-viewer { 
+  width: 100%;
+  height: 100%;
+}
+
+
 .nav-buttons {
   position: fixed;
   bottom: 60px; /* کمی بالاتر از لبه */
@@ -26,16 +58,20 @@ html, body { margin: 0; height: 100%; }
   display: flex;
   gap: 16px; /* فاصله بین دکمه‌ها */
   z-index: 10;
-}
+} 
 
 /* ظاهر هر دکمه */
 .nav-buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:antiquewhite;
+  font: menu;
+  text-decoration: none;
   width: 22px;
   height: 22px;
   border-radius: 50%;
   background: rgba(57, 12, 65, 0.4);
-  display: block;
-  text-indent: -9999px; /* مخفی کردن شماره */
   transition: all 0.25s ease;
   border: 2px solid rgba(118, 129, 229, 0.7);
   cursor: pointer;
@@ -43,7 +79,7 @@ html, body { margin: 0; height: 100%; }
 
 /* افکت hover */
 .nav-buttons a:hover {
-  background: rgba(117, 28, 28, 0.8);
+  background: rgba(39, 49, 179, 0.8);
   transform: scale(1.2);
 }
 
