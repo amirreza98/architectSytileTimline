@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Architecture Timeline</title>
   <meta name="description" content="Explore the evolution of architecture—from megaliths to contemporary design—in a concise, visual timeline." />
-  <!-- استایل بعداً اضافه می‌شود -->
   <link rel="stylesheet" href="style/homepage.css" />
 </head>
 <body>
   <!-- Header / Nav -->
   <header id="site-header" role="banner">
     <nav aria-label="Primary">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-current="page">
         <img src="images/arch-logo.png" alt="Architecture Timeline" width="60" height="60" />
       </a>
       <ul class="nav-links">
@@ -20,7 +19,7 @@
         <li><a href="#periods">Periods</a></li>
         <li><a href="#preview">Preview</a></li>
       </ul>
-      <a class="btn" href="slider.html">Open 3D Timeline</a>
+      <a class="btn btn--primary" href="slider.html">Open 3D Timeline</a>
     </nav>
   </header>
 
@@ -33,8 +32,9 @@
       <div class="hero-content">
         <h1>Architecture <span class="underline">Timeline</span></h1>
         <p class="subtitle">From stone circles to supertalls—trace the materials, forms, and ideas that shaped our built world.</p>
-        <div class="actions">
-          <a class="btn" href="slider.html">Open 3D Timeline</a>
+
+        <div class="hero-cta">
+          <a class="btn btn--primary" href="slider.html">Open 3D Timeline</a>
           <a class="btn btn--ghost" href="#periods">Browse periods</a>
         </div>
 
@@ -54,66 +54,143 @@
 
     <!-- ABOUT -->
     <section id="about" aria-labelledby="about-title">
-      <div class="section-heading">
-        <h2 id="about-title">About</h2>
-        <p>A compact, visual primer on architectural history—optimized for students, educators, and curious minds.</p>
-      </div>
-      <div class="about-grid">
-        <article>
-          <h3>Context</h3>
-          <p>Each era includes culture, technology, and tectonics in short notes.</p>
-        </article>
-        <article>
-          <h3>Materiality</h3>
-          <p>Stone, brick, concrete, steel, glass—watch the palette evolve.</p>
-        </article>
-        <article>
-          <h3>Type &amp; Form</h3>
-          <p>Temples, cathedrals, villas, towers—typologies through time.</p>
-        </article>
+      <div class="container about-wrap">
+        <header class="section-heading">
+          <h2 id="about-title">About</h2>
+          <p class="lead">
+            A compact, visual primer on architectural history—optimized for students, educators, and curious minds.
+          </p>
+        </header>
+
+        <!-- سه ویژگی کلیدی -->
+        <div class="about-grid">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">
+              <!-- ستون/Order -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M6 7h12M8 7v10m8-10v10M5 19h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Context</h3>
+            <p>Each era includes culture, technology, and tectonics in short notes.</p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">
+              <!-- آجر/متریال -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 9h18M3 15h18M7 9v6m10-6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Materiality</h3>
+            <p>Stone, brick, concrete, steel, glass—watch the palette evolve.</p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">
+              <!-- گنبد/فرم -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0116 0v6H4v-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M2.5 18.5h19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Type &amp; Form</h3>
+            <p>Temples, cathedrals, villas, towers—typologies through time.</p>
+          </article>
+        </div>
+
+        <!-- آمار کوتاه -->
+        <ul class="about-stats" aria-label="Quick stats">
+          <li><strong>8</strong><span>Eras</span></li>
+          <li><strong>3D</strong><span>Interactive</span></li>
+          <li><strong>CC</strong><span>Open assets</span></li>
+        </ul>
+
+        <!-- کال‌اوت/Quote -->
+        <figure class="about-quote">
+          <blockquote>
+            “Structure is the giver of light.”
+          </blockquote>
+          <figcaption>— Louis Kahn</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- PERIODS (Roadmap) -->
     <section id="periods" aria-labelledby="periods-title">
-      <div class="section-heading">
-        <h2 id="periods-title">Periods</h2>
-        <p>Eight eras, one thread: structure, space, and society.</p>
+      <div class="container">
+        <header class="section-heading">
+          <h2 id="periods-title">Periods</h2>
+          <p>Eight eras, one thread: structure, space, and society.</p>
+        </header>
+
+        <ol class="timeline">
+          <li>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3>Megalithic</h3>
+              <p class="period-year">c. 3000–2000 BCE</p>
+              <p>Stone circles, trilithons, post-and-lintel structures.</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3>Ancient Egypt</h3>
+              <p class="period-year">c. 2700–1070 BCE</p>
+              <p>Pyramids, hypostyle halls, axial composition.</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3>Classical Greece</h3>
+              <p class="period-year">c. 600–323 BCE</p>
+              <p>Orders, proportion systems, entasis.</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3>Roman</h3>
+              <p class="period-year">27 BCE–476 CE</p>
+              <p>Arch, vault, dome—concrete revolution.</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3>Gothic</h3>
+              <p class="period-year">12th–16th c.</p>
+              <p>Ribbed vaults, pointed arches, flying buttresses.</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3>Renaissance</h3>
+              <p class="period-year">15th–16th c.</p>
+              <p>Humanist geometry, central plans, domes.</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3>Modern</h3>
+              <p class="period-year">20th c.</p>
+              <p>Frame + curtain wall, minimalism, new materials.</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <h3>Contemporary</h3>
+              <p class="period-year">Late 20th–21st c.</p>
+              <p>Parametric forms, sustainability, composites.</p>
+            </div>
+          </li>
+        </ol>
       </div>
-      <ol class="period-list">
-        <li>
-          <h3>Megalithic</h3>
-          <p>c. 3000–2000 BCE · Stone circles, trilithons, post-and-lintel.</p>
-        </li>
-        <li>
-          <h3>Ancient Egypt</h3>
-          <p>c. 2700–1070 BCE · Pyramids, hypostyle halls, axiality.</p>
-        </li>
-        <li>
-          <h3>Classical Greece</h3>
-          <p>c. 600–323 BCE · Orders, proportion systems, entasis.</p>
-        </li>
-        <li>
-          <h3>Roman</h3>
-          <p>27 BCE–476 CE · Arch, vault, dome; concrete revolution.</p>
-        </li>
-        <li>
-          <h3>Gothic</h3>
-          <p>12th–16th c. · Ribbed vaults, pointed arches, flying buttresses.</p>
-        </li>
-        <li>
-          <h3>Renaissance</h3>
-          <p>15th–16th c. · Humanist geometry, central plans, domes.</p>
-        </li>
-        <li>
-          <h3>Modern</h3>
-          <p>20th c. · Frame + curtain wall, minimalism, new materials.</p>
-        </li>
-        <li>
-          <h3>Contemporary</h3>
-          <p>Late 20th–21st c. · Parametric forms, sustainability, composites.</p>
-        </li>
-      </ol>
     </section>
 
     <!-- PREVIEW (thumbnails) -->
@@ -124,20 +201,17 @@
       </div>
       <div class="thumb-grid">
         <figure>
-          <img src="images/thumb-megalith.jpg" alt="Megalithic arrangement" width="480" height="320" loading="lazy" />
-          <figcaption>Megalithic</figcaption>
+          <img src="images/thumb-megalith.png" alt="Prehistoric Time - 11,600 B.C. to 3,500 B.C preview" width="480" height="320" loading="lazy" />
+          <figcaption>Prehistoric Time - 11,600 B.C. to 3,500 B.C</figcaption>
         </figure>
         <figure>
-          <img src="images/thumb-egypt.jpg" alt="Egyptian pyramid" width="480" height="320" loading="lazy" />
-          <figcaption>Ancient Egypt</figcaption>
+          <img src="images/thumb-egypt.png" alt="Egyptian pyramid" width="480" height="320" loading="lazy" />
+          <figcaption>Ancient Egypt - 3,050 B.C. to 900 B.C</figcaption>
         </figure>
         <figure>
-          <img src="images/thumb-modern.jpg" alt="Modernist glass-and-steel" width="480" height="320" loading="lazy" />
+          <img src="images/thumb-modern.png" alt="Modernist glass-and-steel" width="480" height="320" loading="lazy" />
           <figcaption>Modern</figcaption>
         </figure>
-        <div class="more">
-          <a class="btn btn--ghost" href="slider.html">Open 3D Timeline</a>
-        </div>
       </div>
     </section>
   </main>
@@ -154,12 +228,13 @@
           <li><a href="#about">About</a></li>
           <li><a href="#periods">Periods</a></li>
           <li><a href="#preview">Preview</a></li>
-          <li><a href="#contribute">Contribute</a></li>
+          <!-- اگر بعداً بخش مشارکت اضافه شد، این را فعال کن -->
+          <!-- <li><a href="#contribute">Contribute</a></li> -->
         </ul>
       </nav>
       <ul class="social">
-        <li><a href="#" aria-label="GitHub">GitHub</a></li>
-        <li><a href="#" aria-label="YouTube">YouTube</a></li>
+        <li><a href="https://github.com/amirreza98" aria-label="GitHub">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/amirrezaazemati/" aria-label="LinkedIn">LinkedIn</a></li>
       </ul>
     </div>
     <small>© 2025 Architecture Timeline</small>
