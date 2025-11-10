@@ -1,17 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="homepage.css" />
-  </head>
-  <body>
-      <div id="hero">
-          <img src="images/spacex.png" id="main-logo">
-          <h1>Join the <span class="underline">exploration</span></h1>
-          <a class="btn" href="slider.html" >Apply</button>
-          </div>
-      <h3>Terms and conditions apply</h3>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Architecture Timeline</title>
+  <meta name="description" content="Explore the evolution of architecture—from megaliths to contemporary design—in a concise, visual timeline." />
+  <!-- استایل بعداً اضافه می‌شود -->
+  <link rel="stylesheet" href="style/homepage.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header id="site-header" role="banner">
+    <nav aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="images/arch-logo.png" alt="Architecture Timeline" width="60" height="60" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#periods">Periods</a></li>
+        <li><a href="#preview">Preview</a></li>
+      </ul>
+      <a class="btn" href="slider.html">Open 3D Timeline</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <!-- HERO -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-media">
+        <img src="images/hero-architecture.jpg" alt="" width="1600" height="900" loading="lazy" />
+      </div>
+      <div class="hero-content">
+        <h1>Architecture <span class="underline">Timeline</span></h1>
+        <p class="subtitle">From stone circles to supertalls—trace the materials, forms, and ideas that shaped our built world.</p>
+        <div class="actions">
+          <a class="btn" href="slider.html">Open 3D Timeline</a>
+          <a class="btn btn--ghost" href="#periods">Browse periods</a>
+        </div>
+
+        <!-- دسته‌بندی سریع (تب‌ها) -->
+        <ul class="hero-tabs" aria-label="Quick filters">
+          <li><a href="#periods">Megalithic</a></li>
+          <li><a href="#periods">Egypt</a></li>
+          <li><a href="#periods">Classical</a></li>
+          <li><a href="#periods">Roman</a></li>
+          <li><a href="#periods">Gothic</a></li>
+          <li><a href="#periods">Renaissance</a></li>
+          <li><a href="#periods">Modern</a></li>
+          <li><a href="#periods">Contemporary</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <h2 id="about-title">About</h2>
+        <p>A compact, visual primer on architectural history—optimized for students, educators, and curious minds.</p>
+      </div>
+      <div class="about-grid">
+        <article>
+          <h3>Context</h3>
+          <p>Each era includes culture, technology, and tectonics in short notes.</p>
+        </article>
+        <article>
+          <h3>Materiality</h3>
+          <p>Stone, brick, concrete, steel, glass—watch the palette evolve.</p>
+        </article>
+        <article>
+          <h3>Type &amp; Form</h3>
+          <p>Temples, cathedrals, villas, towers—typologies through time.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PERIODS (Roadmap) -->
+    <section id="periods" aria-labelledby="periods-title">
+      <div class="section-heading">
+        <h2 id="periods-title">Periods</h2>
+        <p>Eight eras, one thread: structure, space, and society.</p>
+      </div>
+      <ol class="period-list">
+        <li>
+          <h3>Megalithic</h3>
+          <p>c. 3000–2000 BCE · Stone circles, trilithons, post-and-lintel.</p>
+        </li>
+        <li>
+          <h3>Ancient Egypt</h3>
+          <p>c. 2700–1070 BCE · Pyramids, hypostyle halls, axiality.</p>
+        </li>
+        <li>
+          <h3>Classical Greece</h3>
+          <p>c. 600–323 BCE · Orders, proportion systems, entasis.</p>
+        </li>
+        <li>
+          <h3>Roman</h3>
+          <p>27 BCE–476 CE · Arch, vault, dome; concrete revolution.</p>
+        </li>
+        <li>
+          <h3>Gothic</h3>
+          <p>12th–16th c. · Ribbed vaults, pointed arches, flying buttresses.</p>
+        </li>
+        <li>
+          <h3>Renaissance</h3>
+          <p>15th–16th c. · Humanist geometry, central plans, domes.</p>
+        </li>
+        <li>
+          <h3>Modern</h3>
+          <p>20th c. · Frame + curtain wall, minimalism, new materials.</p>
+        </li>
+        <li>
+          <h3>Contemporary</h3>
+          <p>Late 20th–21st c. · Parametric forms, sustainability, composites.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PREVIEW (thumbnails) -->
+    <section id="preview" aria-labelledby="preview-title">
+      <div class="section-heading">
+        <h2 id="preview-title">Preview</h2>
+        <p>Snapshots from the 3D timeline.</p>
+      </div>
+      <div class="thumb-grid">
+        <figure>
+          <img src="images/thumb-megalith.jpg" alt="Megalithic arrangement" width="480" height="320" loading="lazy" />
+          <figcaption>Megalithic</figcaption>
+        </figure>
+        <figure>
+          <img src="images/thumb-egypt.jpg" alt="Egyptian pyramid" width="480" height="320" loading="lazy" />
+          <figcaption>Ancient Egypt</figcaption>
+        </figure>
+        <figure>
+          <img src="images/thumb-modern.jpg" alt="Modernist glass-and-steel" width="480" height="320" loading="lazy" />
+          <figcaption>Modern</figcaption>
+        </figure>
+        <div class="more">
+          <a class="btn btn--ghost" href="slider.html">Open 3D Timeline</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <strong>Architecture Timeline</strong>
+        <p>Berlin · Open Study</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#periods">Periods</a></li>
+          <li><a href="#preview">Preview</a></li>
+          <li><a href="#contribute">Contribute</a></li>
+        </ul>
+      </nav>
+      <ul class="social">
+        <li><a href="#" aria-label="GitHub">GitHub</a></li>
+        <li><a href="#" aria-label="YouTube">YouTube</a></li>
+      </ul>
+    </div>
+    <small>© 2025 Architecture Timeline</small>
+  </footer>
+</body>
 </html>
